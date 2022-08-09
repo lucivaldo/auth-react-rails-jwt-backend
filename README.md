@@ -18,3 +18,5 @@ Após alguns usuários terem sido logados, para gerar alguns usuários no backen
 ## Iniciar a aplicação
 
 `rails s -p 3010`
+
+Esta implementação segue o fluxo desenhado [neste arquivo](https://github.com/lucivaldo/auth-react-rails-jwt-backend/blob/main/docs/Autentica%C3%A7%C3%A3o%20JWT%20-%20Fluxo%20frontend%20React%20com%20backend%20em%20Rails.png)
