@@ -15,4 +15,8 @@ class AuthController < ApplicationController
       render json: { token: null, usuario: nil }
     end
   end
+
+  def destroy
+    redirect_to EgideAuth.signout_url, allow_other_host: true
+  end
 end

@@ -33,5 +33,9 @@ module EgideAuth
     def token(code)
       client.auth_code.get_token(code, redirect_uri: ENV['EGIDE_REDIRECT_URL']) if code
     end
+
+    def signout_url
+      "#{ENV['EGIDE_BASE_URL']}/logout"
+    end
   end
 end
