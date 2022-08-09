@@ -15,7 +15,7 @@ class ApiController < ActionController::Base
       decoded = JsonWebToken.decode(authorization_header)
       @current_user = Usuario.find(decoded[:user_id])
 
-      logger.info "---- -- User: #{@current_user.username} -- ----"
+      logger.info "---- -- 🙂 Current User: #{@current_user.username} 👀 -- ----"
     rescue ActiveRecord::RecordNotFound => ex
       render json: { error: ex.message }, status: :unauthorized
     rescue JWT::DecodeError => ex
