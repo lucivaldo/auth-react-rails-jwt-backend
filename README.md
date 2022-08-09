@@ -1,24 +1,20 @@
-# README
+# Autenticação de aplicação React com backend em Rails utilizando JWT - Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Observação
 
-Things you may want to cover:
+Esta aplicação utiliza o provider de autenticação OAuth2 __Égide__, da Defensoria Pública do Estado do Tocantins, mas pode ser adaptado para qualquer provider de autenticação OAuth2.
 
-* Ruby version
+## Configuração
 
-* System dependencies
+Criar um arquivo __.env.development__ na raiz do projeto configurando as variáveis de ambiente definidas no arquivo de exemplo __.env.development.example__.
 
-* Configuration
+## Gerar posts para desenvolvimento
 
-* Database creation
+Após alguns usuários terem sido logados, para gerar alguns usuários no backend da aplicação autenticados com o provider OAuth2, pode ser gerados posts fakers, para trabalhar em desenvolvimento.
 
-* Database initialization
+`rails posts:create`
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Iniciar a aplicação
 
-* Deployment instructions
-
-* ...
+`rails s -p 3010`
