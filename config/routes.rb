@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'auth/new', to: 'auth#new'
+  post 'auth/token', to: 'auth#token'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :api do
+    resources :posts, only: [:index]
+  end
 end
