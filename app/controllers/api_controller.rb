@@ -1,13 +1,13 @@
 class ApiController < ActionController::Base
   skip_before_action :verify_authenticity_token
 
-  before_action :authenticate
+  before_action :authenticate!
 
   attr_reader :current_user
 
   private
 
-  def authenticate
+  def authenticate!
     authorization_header = request.headers['Authorization']
     authorization_header = authorization_header.split(' ').last if authorization_header
 
