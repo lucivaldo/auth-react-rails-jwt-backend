@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   get   'auth/destroy', to: 'auth#destroy'
 
   namespace :api do
-    resources :posts, only: [:index]
+    resources :posts, only: %i[index show]
   end
 end
