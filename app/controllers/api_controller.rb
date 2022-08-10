@@ -5,7 +5,7 @@ class ApiController < ActionController::Base
 
   attr_reader :current_user
 
-  private 
+  private
 
   def authenticate
     authorization_header = request.headers['Authorization']
